@@ -1,17 +1,29 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 
 function App() {
   
-  let [counter,setcounter]=useState(0)
+  let [counter,setcounter]=useState(0)      // hook
   const addcounter= function(){
     if (counter<20){
       counter=counter+1;
-      setcounter(counter)
+      setcounter(counter+1)
       console.log("clicked")
+
     }
+                                    //                 // interviwe question
+                                    //                 // (this is not a working for all becouse the uppdate go in a bundales)
+                                    //    setcounter(counter+1)
+                                    //   setcounter(counter+1 )
+                                    //    setcounter(counter+1)    
+                                    //   setcounter(counter+1)
+                                
+                                    //                       // so that use the call funtion
+                                    // setcounter(prevCounter =>prevCounter+1)
+                                    // setcounter(prevCounter =>prevCounter+1 )
+                                    // setcounter(prevCounter =>prevCounter+1)    
+                                    // setcounter(prevCounter =>prevCounter+1)
   }
   const remove= function(){
     if (counter>0){
